@@ -22,7 +22,7 @@ class GooglePlacesAPITests: XCTestCase {
     func test_API_values() {
         let parameter = "location=52.311420,4.870087&radius=500&type=restaurant&keyword=sushi"
         let baseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
-        let apiKey = "AIzaSyAPQ-8GFc2uPGAXWEp7kCb2_egeBN0rCEE"
+        let apiKey = "AIzaSyA1Zv-60eJLWvbwYljtysHT_zdSYWgTj5Q"
         let httpMethod = HTTPMethod.get
         let relativeURL = baseURL + "\(parameter)&key=\(apiKey)"
         
