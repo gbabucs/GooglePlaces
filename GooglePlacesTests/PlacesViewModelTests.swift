@@ -26,7 +26,7 @@ class PlacesViewModelTests: XCTestCase {
         
         self.viewModel.places = places
         
-        XCTAssertNotEqual(self.viewModel.places.count, 4, "Expected both viewModel and model have different values")
+        XCTAssertNotEqual(self.viewModel.places.count, 5, "Expected both viewModel and model have different values")
         
         XCTAssertEqual(self.viewModel.places.count, 0, "Expected both viewModel and model have 0 values")
     }
@@ -36,7 +36,7 @@ class PlacesViewModelTests: XCTestCase {
         
         self.viewModel.places = places
         
-        XCTAssertEqual(self.viewModel.places.count, 0, "Expected both viewModel and model have same data")
+        XCTAssertEqual(self.viewModel.places.count, 5, "Expected both viewModel and model have same data")
     }
     
     
@@ -62,6 +62,7 @@ class PlacesViewModelTests: XCTestCase {
 }
 
 extension FileManager {
+    
     static func readJsonFile(forResource fileName: String ) -> Data? {
         let bundle = Bundle(for: PlacesViewModelTests.self)
         

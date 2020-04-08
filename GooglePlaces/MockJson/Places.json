@@ -1,0 +1,258 @@
+{
+   "html_attributions": [],
+   "results": [
+      {
+         "geometry": {
+            "location": {
+               "lat": 52.30954740000001,
+               "lng": 4.8636634
+            },
+            "viewport": {
+               "northeast": {
+                  "lat": 52.31089972989272,
+                  "lng": 4.864866979892722
+               },
+               "southwest": {
+                  "lat": 52.30820007010728,
+                  "lng": 4.862167320107278
+               }
+            }
+         },
+         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id": "dfcd7916cf2714a10efaf00480f4ae752bf29855",
+         "name": "Hiro Sushi",
+         "opening_hours": {
+            "open_now": true
+         },
+         "photos": [
+            {
+               "height": 3024,
+               "html_attributions": [
+                  "<a href=\"https://maps.google.com/maps/contrib/109816181635128109616\">A Google User</a>"
+               ],
+               "photo_reference": "CmRaAAAAJ906NsQDoZvqjKjtInzMGj8Mf5-9-9wMK2svNOXSIV5MAcCVxifW2fO1melEvGrRNcgtlPT6LBb-wt9jTtN3POYNj4mqYu_n3mzcgNynpmXGnrfBM_grbjau3yiYipVCEhBEU_gRnIznin9M9Vchxo6_GhSNFr435LMGtU04aSb6mQLIS-g-WA",
+               "width": 3024
+            }
+         ],
+         "place_id": "ChIJIwVgSXkKxkcRbcMUyYDZMWE",
+         "plus_code": {
+            "compound_code": "8V57+RF Amstelveen",
+            "global_code": "9F468V57+RF"
+         },
+         "rating": 4.5,
+         "reference": "ChIJIwVgSXkKxkcRbcMUyYDZMWE",
+         "scope": "GOOGLE",
+         "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total": 33,
+         "vicinity": "Rembrandtweg 324, Amstelveen"
+      },
+      {
+         "geometry": {
+            "location": {
+               "lat": 52.3097114,
+               "lng": 4.863660400000001
+            },
+            "viewport": {
+               "northeast": {
+                  "lat": 52.31106362989271,
+                  "lng": 4.864869229892722
+               },
+               "southwest": {
+                  "lat": 52.30836397010727,
+                  "lng": 4.862169570107278
+               }
+            }
+         },
+         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id": "34af1cdd022c2c5e7630040f4d352140af5777cf",
+         "name": "Take-Ya Sushi and Japanese Food Specialities",
+         "opening_hours": {
+            "open_now": true
+         },
+         "photos": [
+            {
+               "height": 816,
+               "html_attributions": [
+                  "<a href=\"https://maps.google.com/maps/contrib/112640695600135245105\">Fabio Hatori</a>"
+               ],
+               "photo_reference": "CmRaAAAAbRTGfopy2GmC6S9crDUNQOuatanMDyYkW2sHqFLg8_zJSREOX_6qrUciOLTCZk8b6TkBXw5i5Q70i6KPTo9OhLX2E8tVs-QnuJMikFICuR6PYtf6L4TR_9mTKDsFPORWEhArln2Nbkoa5t7hXoBDNXvWGhQjN2FlG6bllWh_NUDqdQk9jGtX9w",
+               "width": 544
+            }
+         ],
+         "place_id": "ChIJGzhNSXkKxkcRA6GSqXgpO5o",
+         "plus_code": {
+            "compound_code": "8V57+VF Amstelveen",
+            "global_code": "9F468V57+VF"
+         },
+         "rating": 4,
+         "reference": "ChIJGzhNSXkKxkcRA6GSqXgpO5o",
+         "scope": "GOOGLE",
+         "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total": 34,
+         "vicinity": "Rembrandtweg 340, Amstelveen"
+      },
+      {
+         "geometry": {
+            "location": {
+               "lat": 52.3130142,
+               "lng": 4.874842399999999
+            },
+            "viewport": {
+               "northeast": {
+                  "lat": 52.31435197989273,
+                  "lng": 4.876113779892721
+               },
+               "southwest": {
+                  "lat": 52.31165232010729,
+                  "lng": 4.873414120107277
+               }
+            }
+         },
+         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id": "54cc9a05e3c3427ad3cf55ea35b0fb221fe665c3",
+         "name": "Ishii Okonomiyaki",
+         "opening_hours": {
+            "open_now": true
+         },
+         "photos": [
+            {
+               "height": 4032,
+               "html_attributions": [
+                  "<a href=\"https://maps.google.com/maps/contrib/115758353666116275509\">summer lovely</a>"
+               ],
+               "photo_reference": "CmRaAAAAmT4MqpbOJP5hVpm5Yf_oJIAcI8Uim_JIOJjmHx7p2c3ejRB7A-9VNP_HgQGQrRdIWVpEmxqMU-in8LEcvmEos_fMU_OerFMcH4x8kDnNQ9iBs9aIFHLBfQLtxkO-L-znEhCgFzXqR9gcADt_IeJ_lQiXGhSiuAktbKdTqtOTfHxIPNbIgJU82w",
+               "width": 3024
+            }
+         ],
+         "place_id": "ChIJHw70dGUKxkcRuhtVG4qrTO0",
+         "plus_code": {
+            "compound_code": "8V7F+6W Amstelveen",
+            "global_code": "9F468V7F+6W"
+         },
+         "price_level": 2,
+         "rating": 4.5,
+         "reference": "ChIJHw70dGUKxkcRuhtVG4qrTO0",
+         "scope": "GOOGLE",
+         "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total": 359,
+         "vicinity": "Kostverlorenhof 58, Amstelveen"
+      },
+      {
+         "geometry": {
+            "location": {
+               "lat": 52.312852,
+               "lng": 4.875756
+            },
+            "viewport": {
+               "northeast": {
+                  "lat": 52.31426207989273,
+                  "lng": 4.877255229892722
+               },
+               "southwest": {
+                  "lat": 52.31156242010728,
+                  "lng": 4.874555570107278
+               }
+            }
+         },
+         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id": "2993f3c0eea6777aa47cee69a85067b1b433e0b9",
+         "name": "Restaurant Nagomi",
+         "opening_hours": {
+            "open_now": true
+         },
+         "photos": [
+            {
+               "height": 4032,
+               "html_attributions": [
+                  "<a href=\"https://maps.google.com/maps/contrib/100874879253457671271\">cro rapi</a>"
+               ],
+               "photo_reference": "CmRaAAAA4jzNDrPg8FyaHTQ7Q8bT7jobTUhcmPl4p1dk0JM88dVEOrMKP1Fuy_agOFvjqBE-TacrKAiocqMR5v7RIgHE7RLNMDTXIaFUE792DpuCc2NDcVO1N3UGjnuSv2xmrWz6EhCuUG4mbpjSf_2fgY53qQxZGhQ9ciRSWPJK_ZBUyWhpaGySShB7fw",
+               "width": 3024
+            }
+         ],
+         "place_id": "ChIJW2W6mWUKxkcRObY9lJ2DnuY",
+         "plus_code": {
+            "compound_code": "8V7G+48 Amstelveen",
+            "global_code": "9F468V7G+48"
+         },
+         "rating": 4.2,
+         "reference": "ChIJW2W6mWUKxkcRObY9lJ2DnuY",
+         "scope": "GOOGLE",
+         "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total": 61,
+         "vicinity": "Kostverlorenhof 67, Amstelveen"
+      },
+      {
+         "geometry": {
+            "location": {
+               "lat": 52.305633,
+               "lng": 4.861776799999999
+            },
+            "viewport": {
+               "northeast": {
+                  "lat": 52.30706747989272,
+                  "lng": 4.863177079892722
+               },
+               "southwest": {
+                  "lat": 52.30436782010728,
+                  "lng": 4.860477420107278
+               }
+            }
+         },
+         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id": "c5e8cdcccf0c99def72ffc91a12ab9c51ec6df97",
+         "name": "SushiPoint Amstelveen",
+         "opening_hours": {
+            "open_now": true
+         },
+         "photos": [
+            {
+               "height": 516,
+               "html_attributions": [
+                  "<a href=\"https://maps.google.com/maps/contrib/109205253507877739700\">A Google User</a>"
+               ],
+               "photo_reference": "CmRaAAAA_3WDoNFCXtxCUkafxfUbl4T5m_zz0CqA6OzrdIU3-DFqOHVKoxrSq8LGkAlF8OJ6G4JiBYFpSyypPcfuIdp1RUYXzpHiUW6hil3MofFPJwvd8OxCISHlHBuBHraho88YEhClDx95jSucc5aFPFEy_g5YGhTAA6b8otK-bN6MDId09Pd1OSDa_A",
+               "width": 919
+            }
+         ],
+         "place_id": "ChIJC1kWmicLxkcRe7J90h7S-R0",
+         "plus_code": {
+            "compound_code": "8V46+7P Amstelveen",
+            "global_code": "9F468V46+7P"
+         },
+         "price_level": 2,
+         "rating": 4.4,
+         "reference": "ChIJC1kWmicLxkcRe7J90h7S-R0",
+         "scope": "GOOGLE",
+         "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total": 29,
+         "vicinity": "Meester G. Groen van Prinstererlaan, Amstelveen"
+      }
+   ],
+   "status": "OK"
+}
