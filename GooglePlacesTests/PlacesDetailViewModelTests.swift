@@ -24,6 +24,8 @@ class PlacesDetailViewModelTests: XCTestCase {
         super.tearDown()
     }
     
+    //FIXME: - api error for place detail
+    
 //    func testViewModelIsEmpty() {
 //        XCTAssertNotEqual(self.viewModel.place.name, "", "Expected both viewModel and model have different values")
 //        XCTAssertEqual(self.viewModel.place.photos.count, 0, "Expected both viewModel and model have 0 values")
