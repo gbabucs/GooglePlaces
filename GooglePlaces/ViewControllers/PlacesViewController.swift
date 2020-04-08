@@ -17,9 +17,9 @@ protocol FilterDelegate: class {
 
 class PlacesViewController: UIViewController {
     
-    @IBOutlet weak var sortButton: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortBarButton: UIButton!
     
     //--------------------------------------------------------------------------
     // MARK: - Properties
@@ -97,7 +97,7 @@ class PlacesViewController: UIViewController {
         }
     }
     
-    @IBAction func sortButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction func sortButtonTapped(_ sender: Any) {
     
         let simpleDataArray = [Sorting.ascending.displayName,
                                Sorting.descending.displayName,
@@ -113,7 +113,7 @@ class PlacesViewController: UIViewController {
             self?.selectedSortType = selectedItems
         }
         
-        selectionMenu.show(style: .actionSheet(title: nil, action: "Done", height: nil), from: self)
+        selectionMenu.show(style: .popover(sourceView: sortBarButton, size: CGSize(width: 180, height: 190)), from: self)
         
         selectionMenu.onDismiss = { [weak self] selectedItems in
             guard let type = selectedItems.first?.lowercased() else { return }

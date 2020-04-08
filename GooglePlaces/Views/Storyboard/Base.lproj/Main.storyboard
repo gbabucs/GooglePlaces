@@ -136,15 +136,20 @@
                                 <segue destination="2H2-X8-um4" kind="presentation" identifier="showFilter" id="rNf-Fl-lVH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="9zC-wi-j0Y">
-                            <connections>
-                                <action selector="sortButtonClicked:" destination="BYZ-38-t0r" id="tXi-1A-q6c"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZAP-rP-5VE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="px4-hh-Ezm">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sort"/>
+                                <connections>
+                                    <action selector="sortButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o07-Zd-IuM"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="Yu7-gf-oQA" id="FiM-Pr-xPW"/>
-                        <outlet property="sortButton" destination="9zC-wi-j0Y" id="usq-ov-NL2"/>
+                        <outlet property="sortBarButton" destination="px4-hh-Ezm" id="8XE-AB-gja"/>
                         <outlet property="tableView" destination="Zh8-wa-IN1" id="Qzd-aK-igL"/>
                         <segue destination="cm8-RG-Vao" kind="show" identifier="showDetail" id="nmN-Fc-AtX"/>
                     </connections>
