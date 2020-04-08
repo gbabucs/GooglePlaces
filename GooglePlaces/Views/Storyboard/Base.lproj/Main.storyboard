@@ -15,18 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-gf-oQA">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="vja-ab-pkt"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pDX-jW-4fV"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zh8-wa-IN1">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesResultCell" rowHeight="122" id="Xm1-J5-Tsf" customClass="PlacesResultCell" customModule="GooglePlaces" customModuleProvider="target">
@@ -121,12 +111,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Zh8-wa-IN1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Da-Cy-cOe"/>
-                            <constraint firstItem="Zh8-wa-IN1" firstAttribute="top" secondItem="Yu7-gf-oQA" secondAttribute="bottom" symbolic="YES" id="9GQ-Nc-QHR"/>
+                            <constraint firstItem="Zh8-wa-IN1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LNO-eQ-uHa"/>
                             <constraint firstItem="Zh8-wa-IN1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OT8-MH-qZ4"/>
-                            <constraint firstItem="Yu7-gf-oQA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sn6-My-jaC"/>
-                            <constraint firstItem="Yu7-gf-oQA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y7z-aB-h36"/>
                             <constraint firstItem="Zh8-wa-IN1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YV6-ly-jk7"/>
-                            <constraint firstItem="Yu7-gf-oQA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nPq-8K-z9y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -148,7 +135,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBar" destination="Yu7-gf-oQA" id="FiM-Pr-xPW"/>
                         <outlet property="sortBarButton" destination="px4-hh-Ezm" id="8XE-AB-gja"/>
                         <outlet property="tableView" destination="Zh8-wa-IN1" id="Qzd-aK-igL"/>
                         <segue destination="cm8-RG-Vao" kind="show" identifier="showDetail" id="nmN-Fc-AtX"/>

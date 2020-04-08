@@ -17,7 +17,6 @@ protocol FilterDelegate: class {
 
 class PlacesViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortBarButton: UIButton!
     
@@ -27,16 +26,18 @@ class PlacesViewController: UIViewController {
     let locationManager = CLLocationManager()
     let hud = JGProgressHUD(style: .dark)
     
-    var location: CLLocation?
+    var location: CLLocation? {
+        didSet {
+            self.fetchPlaces()
+        }
+    }
     var lastLocationError: Error?
     var updatingLocation = false
     var filterDict = Dictionary<String, String>()
     var defaultRadius = "2.0"
-    var defaultSearchType = "restaurant"
+    var defaultType = "restaurant"
     var viewModel = PlacesViewModel()
     var selectedSortType = [String]()
-    
-    
     
     private(set) var selectedPlace: PlacesResult?
     
@@ -48,18 +49,19 @@ class PlacesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         getLocation()
     }
     
     func setupView() {
-        self.title = "Search Places"
+        self.title = "Near by Places"
         //Default values
-        filterDict["type"] = defaultSearchType
+        filterDict["type"] = defaultType
         hud.textLabel.text = "Loading"
         tableView.tableFooterView = UIView()
     }
     
-    func getLocation(){
+    func getLocation() {
         let authStatus = CLLocationManager.authorizationStatus()
         
         if authStatus == .notDetermined {
@@ -120,6 +122,33 @@ class PlacesViewController: UIViewController {
             
             self?.viewModel.sortBy(type: type)
             self?.tableView.reloadData()
+        }
+    }
+    
+    func fetchPlaces() {
+        guard let location = location else { return showLocationServicesDeniedAlert() }
+        
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        let radius = defaultRadius
+        let type = filterDict["type"] ?? defaultType
+        
+        self.viewModel = PlacesViewModel(latitude: latitude, longitude: longitude, radius: radius, type: type)
+        
+        if NetworkState.isConnected {
+            hud.show(in: self.view)
+            self.viewModel.getPlaces { isError in
+                DispatchQueue.main.async {
+                    self.hud.dismiss()
+                    if isError {
+                        self.showAlert(with: "Server problem", detail: "Please try again later")
+                    }
+                    
+                    self.tableView.reloadData()
+                }
+            }
+        } else {
+            self.showAlert(with: "", detail: "Please check your Internet connection")
         }
     }
     
@@ -189,41 +218,6 @@ extension PlacesViewController: UITableViewDataSource {
         cell.configure(with: place)
         
         return cell
-    }
-}
-
-extension PlacesViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        
-        guard let location = location else { return showLocationServicesDeniedAlert() }
-        
-        let escapedSearchText = searchBar.text!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
-        let radius = defaultRadius
-        let types = filterDict["type"] ?? defaultSearchType
-        
-        self.viewModel = PlacesViewModel(searchText: escapedSearchText, latitude: latitude, longitude: longitude, radius: radius, types: types)
-        
-        
-        if NetworkState.isConnected {
-            hud.show(in: self.view)
-            self.viewModel.getPlaces { isError in
-                DispatchQueue.main.async {
-                    self.hud.dismiss()
-                    if isError {
-                        self.showAlert(with: "Server problem", detail: "Please try again later")
-                    }
-                    
-                    self.tableView.reloadData()
-                }
-            }
-        } else {
-            self.showAlert(with: "", detail: "Please check your Internet connection")
-        }
     }
 }
 

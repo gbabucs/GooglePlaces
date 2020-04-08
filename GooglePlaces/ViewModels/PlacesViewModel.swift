@@ -11,33 +11,27 @@ import CoreLocation
 
 class PlacesViewModel {
     
-    var searchText: String
     var latitude: Double
     var longitude: Double
     var radius: String
-    var types: String
+    var type: String
     var places: [PlacesResult] = []
     
     init(places: [PlacesResult] = [],
-         searchText: String = "",
          latitude: Double = 0.0,
          longitude: Double = 0.0,
          radius: String = "",
-         types: String = "") {
+         type: String = "") {
         self.places = places
-        self.searchText = searchText
         self.latitude = latitude
         self.longitude = longitude
         self.radius = radius
-        self.types = types
+        self.type = type
     }
     
     func getPlaces(completion: @escaping (Bool) -> ()) {
         
-        //TODO: Handle error for proper text
-        guard let escapedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
-        
-        let queryParameter = "location=\(latitude),\(longitude)&radius=\(radius)&type=\(types)&keyword=\(escapedSearchText)"
+        let queryParameter = "location=\(latitude),\(longitude)&radius=\(radius)&type=\(type)"
         
         DataAdapter.shared.fetchPlaceSearch(parameters: queryParameter) { response, error in
             
