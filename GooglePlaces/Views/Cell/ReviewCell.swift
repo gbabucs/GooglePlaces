@@ -28,11 +28,9 @@ class ReviewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.profileImage.image = nil
-        
         self.nameLabel.text = ""
         self.reviewLabel.text = ""
-        self.starRatingView = nil
-        self.reviewDateLabel = nil
+        self.reviewDateLabel.text = ""
     }
 }
 

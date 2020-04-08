@@ -28,7 +28,9 @@ class PlaceDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "Place Detail"
+        reviewTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,8 +90,6 @@ class PlaceDetailViewController: UIViewController {
         
         imageSlideShow.pageIndicator = pageIndicator
         imageSlideShow.contentScaleMode = .scaleAspectFill
-    
-        reviewTableView.tableFooterView = UIView()
     }
 }
 
