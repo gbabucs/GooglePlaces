@@ -18,7 +18,6 @@ class PlaceDetailViewController: UIViewController {
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     @IBOutlet weak var reviewTableView: UITableView!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var awayLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var openNowLabel: UILabel!
     
@@ -65,8 +64,8 @@ class PlaceDetailViewController: UIViewController {
     }
     
     func setupView() {
-        reviewTableView.estimatedRowHeight = 140
-        reviewTableView.rowHeight = UITableView.automaticDimension
+        //reviewTableView.estimatedRowHeight = 140
+        //reviewTableView.rowHeight = UITableView.automaticDimension
         
         ratingView.settings.fillMode = .precise
         ratingView.settings.updateOnTouch = false
@@ -81,7 +80,7 @@ class PlaceDetailViewController: UIViewController {
         imageSlideShow.backgroundColor = .white
         imageSlideShow.slideshowInterval = 5.0
         
-        imageSlideShow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .left(padding: 20), vertical: .bottom)
+        imageSlideShow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .bottom)
         
         let pageIndicator = UIPageControl()
         pageIndicator.currentPageIndicatorTintColor = .lightGray
@@ -93,8 +92,6 @@ class PlaceDetailViewController: UIViewController {
         reviewTableView.tableFooterView = UIView()
     }
 }
-
-extension PlaceDetailViewController: UITableViewDelegate {}
 
 extension PlaceDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
