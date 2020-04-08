@@ -34,7 +34,7 @@ class PlacesViewController: UIViewController {
     var lastLocationError: Error?
     var updatingLocation = false
     var filterDict = Dictionary<String, String>()
-    var defaultRadius = "2.0"
+    var defaultRadius = "5000"
     var defaultType = "restaurant"
     var viewModel = PlacesViewModel()
     var selectedSortType = [String]()
@@ -224,5 +224,6 @@ extension PlacesViewController: UITableViewDataSource {
 extension PlacesViewController: FilterDelegate {
     func apply(_ types: Dictionary<String, String>) {
         filterDict = types
+        fetchPlaces()
     }
 }
