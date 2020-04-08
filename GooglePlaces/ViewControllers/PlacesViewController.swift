@@ -45,11 +45,6 @@ class PlacesViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         getLocation()
     }
     

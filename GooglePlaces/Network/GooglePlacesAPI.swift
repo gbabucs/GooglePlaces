@@ -14,7 +14,7 @@ import Alamofire
 
 struct GooglePlacesAPIConstant {
     //static let apiKey = "AIzaSyAPQ-8GFc2uPGAXWEp7kCb2_egeBN0rCEE"
-    static let apiKey = "AIzaSyA1Zv-60eJLWvbwYljtysHT_zdSYWgTj5Q"
+    static let apiKey = "AIzaSyBa7kmy9kiiIpE3tXIHdjNcNa5ytxVCC2Y"
 }
 
 enum GooglePlacesAPI {
