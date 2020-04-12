@@ -18,10 +18,9 @@ steps:
 # CocoaPods
 # Install CocoaPods dependencies for Swift and Objective-C Cocoa projects
 - task: CocoaPods@0
+  displayName: 'Install dependencies'
   inputs:
-    #workingDirectory: # Optional
-    forceRepoUpdate: 'pod repo update'
-    projectDirectory: 'pod install'
+    forceRepoUpdate: false
 - task: Xcode@5
   inputs:
     sdk: '$(sdk)'
