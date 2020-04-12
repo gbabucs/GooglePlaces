@@ -15,6 +15,13 @@ variables:
   configuration: 'Debug'
 
 steps:
+# CocoaPods
+# Install CocoaPods dependencies for Swift and Objective-C Cocoa projects
+- task: CocoaPods@0
+  inputs:
+    #workingDirectory: # Optional
+    forceRepoUpdate: 
+    #projectDirectory: # Optional
 - task: Xcode@5
   inputs:
     sdk: '$(sdk)'
