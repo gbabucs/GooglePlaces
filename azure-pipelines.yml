@@ -10,7 +10,7 @@ pool:
   vmImage: 'macos-latest'
 
 variables:
-  scheme: ''
+  scheme: 'GooglePlaces'
   sdk: 'iphoneos'
   configuration: 'Debug'
 
