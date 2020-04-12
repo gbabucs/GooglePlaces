@@ -20,8 +20,8 @@ steps:
 - task: CocoaPods@0
   inputs:
     #workingDirectory: # Optional
-    forceRepoUpdate: 
-    #projectDirectory: # Optional
+    forceRepoUpdate: 'pod repo update'
+    projectDirectory: 'pod install'
 - task: Xcode@5
   inputs:
     sdk: '$(sdk)'
