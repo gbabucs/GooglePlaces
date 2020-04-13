@@ -27,7 +27,7 @@ steps:
     actions: 'clean build analyze archive'
     configuration: 'Debug'
     scheme: 'GooglePlaces'
-    sdk: 'iphoneos'
+    sdk: 'iphonesimulator'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     useXcpretty: false
     args: '-archivePath $(agent.buildDirectory)/GooglePlaces'
