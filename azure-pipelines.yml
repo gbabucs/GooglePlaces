@@ -24,9 +24,10 @@ steps:
 #     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
 - task: Xcode@5
   inputs:
-    actions: 'build'
-    configuration: '$(configuration)'
-    sdk: '$(sdk)'
-    xcWorkspacePath: '**/Project.xcworkspace'
-    scheme: '$(scheme)'
-    packageApp: false
+    actions: 'clean build analyze archive'
+    configuration: 'Debug'
+    scheme: 'GooglePlaces'
+    sdk: 'iphoneos'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+    useXcpretty: false
+    args: '-archivePath $(agent.buildDirectory)/GooglePlaces'
