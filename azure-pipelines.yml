@@ -16,11 +16,23 @@ variables:
 
 steps:
 # CocoaPods
-# Install CocoaPods dependencies for Swift and Objective-C Cocoa projects
+# # Install CocoaPods dependencies for Swift and Objective-C Cocoa projects
+# - task: CocoaPods@0
+#   displayName: 'Install dependencies'
+#   inputs:
+#     forceRepoUpdate: false
+    
+- script: /usr/local/bin/pod install
+  displayName: 'pod install using a script'
+
 - task: CocoaPods@0
-  displayName: 'Install dependencies'
+  displayName: 'pod install using the CocoaPods task with defaults'
+
+- task: CocoaPods@0
   inputs:
-    forceRepoUpdate: false
+    forceRepoUpdate: true
+    projectDirectory: '$(system.defaultWorkingDirectory)'
+  displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
 - task: Xcode@5
   inputs:
     sdk: '$(sdk)'
