@@ -27,6 +27,6 @@ steps:
     actions: 'build'
     configuration: '$(configuration)'
     sdk: '$(sdk)'
-    xcWorkspacePath: 'Project.xcworkspace'
+    xcWorkspacePath: '**/Project.xcworkspace'
     scheme: '$(scheme)'
     packageApp: false
