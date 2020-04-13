@@ -14,11 +14,19 @@ steps:
   displayName: 'Install dependencies'
   inputs:
     forceRepoUpdate: false
+# - task: Xcode@5
+#   inputs:
+#     actions: 'build'
+#     scheme: 'GooglePlaces'
+#     sdk: 'iphoneos'
+#     configuration: 'Debug'
+#     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+#     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
 - task: Xcode@5
   inputs:
     actions: 'build'
-    scheme: 'GooglePlaces'
-    sdk: 'iphoneos'
-    configuration: 'Debug'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    configuration: '$(configuration)'
+    sdk: '$(sdk)'
+    xcWorkspacePath: 'Project.xcworkspace'
+    scheme: '$(scheme)'
+    packageApp: false
