@@ -28,6 +28,8 @@ steps:
     configuration: 'Debug'
     scheme: 'GooglePlaces'
     sdk: 'iphonesimulator'
-    xcWorkspacePath: 'projectname.xcworkspace'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    signingOption: 'default' # Options: nosign, default, manual, auto
     useXcpretty: false
     args: '-archivePath $(agent.buildDirectory)/GooglePlaces'
