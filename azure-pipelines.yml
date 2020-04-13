@@ -17,28 +17,28 @@ variables:
 steps:
 # CocoaPods
 # # Install CocoaPods dependencies for Swift and Objective-C Cocoa projects
-# - task: CocoaPods@0
-#   displayName: 'Install dependencies'
-#   inputs:
-#     forceRepoUpdate: false
-    
-- script: /usr/local/bin/pod install
-  displayName: 'pod install using a script'
-
 - task: CocoaPods@0
-  displayName: 'pod install using the CocoaPods task with defaults'
-
-- task: CocoaPods@0
+  displayName: 'Install dependencies'
   inputs:
-    forceRepoUpdate: true
-    projectDirectory: '$(system.defaultWorkingDirectory)'
-  displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
+    forceRepoUpdate: false
+    
+# - script: /usr/local/bin/pod install
+#   displayName: 'pod install using a script'
+
+# - task: CocoaPods@0
+#   displayName: 'pod install using the CocoaPods task with defaults'
+
+# - task: CocoaPods@0
+#   inputs:
+#     forceRepoUpdate: true
+#     projectDirectory: '$(system.defaultWorkingDirectory)'
+#   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
 - task: Xcode@5
   inputs:
     sdk: '$(sdk)'
     scheme: '$(scheme)'
     configuration: '$(configuration)'
-    xcWorkspacePath: '**/*.xcworkspace'
+    # xcWorkspacePath: '**/*.xcworkspace'
     xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     packageApp: false
