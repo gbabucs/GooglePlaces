@@ -26,6 +26,7 @@ steps:
     sdk: '$(sdk)'
     scheme: '$(scheme)'
     configuration: '$(configuration)'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     packageApp: false
