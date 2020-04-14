@@ -816,9 +816,10 @@
 			baseConfigurationReference = 5348AC702438B8010C01E42E /* Pods-GooglePlacesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GooglePlacesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -827,6 +828,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.babu.sample.GooglePlacesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GooglePlaces.app/GooglePlaces";
@@ -838,9 +841,10 @@
 			baseConfigurationReference = 18D921A5AFFFCB6A549975CD /* Pods-GooglePlacesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GooglePlacesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -849,6 +853,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.babu.sample.GooglePlacesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GooglePlaces.app/GooglePlaces";
