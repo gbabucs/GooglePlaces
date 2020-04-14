@@ -29,7 +29,7 @@ steps:
     configuration: 'Debug'
     scheme: 'GooglePlaces'
     sdk: 'iphoneos'
-    args: '-allowProvisioningUpdates'
+    args: 'allowProvisioningUpdates'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
     signingOption: 'auto' # Options: nosign, default, manual, auto
