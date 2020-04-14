@@ -816,6 +816,7 @@
 			baseConfigurationReference = 5348AC702438B8010C01E42E /* Pods-GooglePlacesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
 				INFOPLIST_FILE = GooglePlacesTests/Info.plist;
@@ -837,6 +838,7 @@
 			baseConfigurationReference = 18D921A5AFFFCB6A549975CD /* Pods-GooglePlacesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
 				INFOPLIST_FILE = GooglePlacesTests/Info.plist;
