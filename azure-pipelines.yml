@@ -15,11 +15,14 @@ steps:
   inputs:
     forceRepoUpdate: false
 - task: Xcode@5
+  displayName: 'Building For iOS'
   inputs:
     actions: 'clean build'
     configuration: 'Debug'
     sdk: 'iphonesimulator'
     scheme: 'GooglePlaces'
+    workingDirectory: 'GooglePlaces'
+    xcWorkspacePath: 'GooglePlaces/GooglePlaces.xcworkspace'
     packageApp: false
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 8'
