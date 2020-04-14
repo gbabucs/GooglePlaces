@@ -29,6 +29,7 @@ steps:
     sdk: 'iphoneos'
     scheme: 'GooglePlaces'
     packageApp: true
+    configuration: 'Debug'
     signingOption: 'auto'
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 11 Pro Max'
