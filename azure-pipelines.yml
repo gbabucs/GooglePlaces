@@ -19,8 +19,8 @@ steps:
     actions: 'clean build'
     configuration: 'Debug'
     sdk: 'iphonesimulator'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: 'GooglePlaces'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     destinationSimulators: 'iPhone 8'
