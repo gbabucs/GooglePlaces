@@ -24,7 +24,8 @@ steps:
 #     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
 - task: Xcode@5
   inputs:
-    actions: 'clean build analyze archive'
+    # actions: 'clean build analyze archive'
+    actions: 'clean build'
     configuration: 'Debug'
     scheme: 'GooglePlaces'
     sdk: 'iphonesimulator'
@@ -32,4 +33,4 @@ steps:
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
     signingOption: 'default' # Options: nosign, default, manual, auto
     useXcpretty: false
-    args: '-archivePath $(agent.buildDirectory)/GooglePlaces'
+    # args: '-archivePath $(agent.buildDirectory)/GooglePlaces'
