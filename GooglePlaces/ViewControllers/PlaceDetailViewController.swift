@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Cosmos
+//import Cosmos
 import ImageSlideshow
 import Alamofire
 import AlamofireImage
@@ -18,7 +18,7 @@ class PlaceDetailViewController: UIViewController {
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     @IBOutlet weak var reviewTableView: UITableView!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var ratingView: CosmosView!
+    //@IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var openNowLabel: UILabel!
     
     let hud = JGProgressHUD(style: .dark)
@@ -69,13 +69,13 @@ class PlaceDetailViewController: UIViewController {
         //reviewTableView.estimatedRowHeight = 140
         //reviewTableView.rowHeight = UITableView.automaticDimension
         
-        ratingView.settings.fillMode = .precise
-        ratingView.settings.updateOnTouch = false
+       // ratingView.settings.fillMode = .precise
+        //ratingView.settings.updateOnTouch = false
         
         if let place = viewModel?.place {
             self.navigationItem.title = place.name
             self.addressLabel.text = place.vicinity
-            self.ratingView.rating = place.rating
+            //self.ratingView.rating = place.rating
             self.openNowLabel.changeLabelColor(place.openingHours.openNow)
         }
         

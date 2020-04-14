@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Cosmos
+//import Cosmos
 
 class PlacesResultCell: UITableViewCell {
     
@@ -15,14 +15,14 @@ class PlacesResultCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var openNowLabel: UILabel!
-    @IBOutlet weak var starRatingView: CosmosView!
+    //@IBOutlet weak var starRatingView: CosmosView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        starRatingView.settings.fillMode = .precise
-        starRatingView.settings.updateOnTouch = false
+       // starRatingView.settings.fillMode = .precise
+       // starRatingView.settings.updateOnTouch = false
     }
     
     override func prepareForReuse() {
@@ -47,7 +47,7 @@ extension PlacesResultCell: Cell {
         addressLabel.text = value.name
         distanceLabel.text = value.distance.formatDistanceInKM
         openNowLabel.changeLabelColor(value.openingHours.openNow)
-        starRatingView.backgroundColor = .clear
-        starRatingView.rating = value.rating
+       // starRatingView.backgroundColor = .clear
+        //starRatingView.rating = value.rating
     }
 }
