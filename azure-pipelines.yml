@@ -20,9 +20,7 @@ steps:
     actions: 'clean build'
     configuration: 'Debug'
     sdk: 'iphonesimulator'
-    scheme: 'GooglePlaces'
-    workingDirectory: 'GooglePlaces'
-    xcWorkspacePath: 'GooglePlaces/GooglePlaces.xcworkspace'
+    scheme: ''
     packageApp: false
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 8'
