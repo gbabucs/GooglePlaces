@@ -1,0 +1,9 @@
+app_identifier("com.babu.sample.GooglePlaces") # The bundle identifier of your app
+apple_id("gbabucs@gmail.com") # Your Apple email address
+
+itc_team_id("120324758") # App Store Connect Team ID
+team_id("6Z8GN8WKY7") # Developer Portal Team ID
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

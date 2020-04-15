@@ -1,0 +1,43 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :development do
+
+    UI.message("\n\n\n=====================================\n Starting iOS build process \n=====================================")
+
+    increment_build_number(xcodeproj: "GooglePlaces.xcodeproj")
+
+    UI.message("\n\n\n=====================================\n building ios app \n=====================================")
+
+    build_app(workspace: "GooglePlaces.xcworkspace", 
+    	scheme: "GooglePlaces",
+    	xcargs: "-allowProvisioningUpdates")
+
+    UI.message("\n\n\n=====================================\n uploading ios with dSYM files (not zipped) \n=====================================")
+
+    # appcenter_upload(api_token: "afc8c3789fee23b2e81036a2bd69093711a5771b",
+    # owner_name: "gbabucs-qtqv",
+    # owner_type: "user",
+    # app_name: "nativeTemplate",
+    # ipa: "/Users/babug/builds/3TpByXJi/0/gbabucs/icsnativeios/ios/nativeTemplate.ipa"
+    # )
+    
+  # upload_to_testflight
+  end
+end
