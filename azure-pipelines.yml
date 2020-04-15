@@ -26,7 +26,13 @@ pool:
 #     destinationPlatformOption: 'iOS'
 #     destinationSimulators: 'iPhone 8'
 
+
 steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      rm -rf Podfile.lock
+      pod install
 
 # - task: InstallAppleCertificate@2
 #   inputs:
@@ -41,9 +47,9 @@ steps:
 #    provProfileSecureFile: '$(provisioningProfile)'
 #    removeProfile: true
 
-- task: CocoaPods@0
-  inputs:
-    forceRepoUpdate: false
+# - task: CocoaPods@0
+#   inputs:
+#     forceRepoUpdate: false
 
 - task: Xcode@5
   displayName: 'Building For iOS'
