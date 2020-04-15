@@ -46,26 +46,38 @@ steps:
     forceRepoUpdate: false
 
 - task: Xcode@5
+  displayName: 'Building For iOS'
   inputs:
-    actions: 'build'
-    scheme: 'GooglePlaces'
-    sdk: 'iphoneos'
-    configuration: 'Release'
+    actions: 'clean build test'
+    configuration: 'Debug'
+    sdk: 'iphonesimulator'
     xcWorkspacePath: '**/GooglePlaces.xcworkspace'
-    xcodeVersion: 'default'
-    packageApp: true
-    signingOption: 'auto'
-    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
-    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+    scheme: 'GooglePlaces'
+    packageApp: false
+    destinationPlatformOption: 'iOS'
+    destinationSimulators: 'iPhone 8'
 
-- task: CopyFiles@2
-  inputs:
-    contents: '**/*.ipa'
-    targetFolder: '$(build.artifactStagingDirectory)'
-    overWrite: true
+# - task: Xcode@5
+#   inputs:
+#     actions: 'build'
+#     scheme: 'GooglePlaces'
+#     sdk: 'iphoneos'
+#     configuration: 'Release'
+#     xcWorkspacePath: '**/GooglePlaces.xcworkspace'
+#     xcodeVersion: 'default'
+#     packageApp: true
+#     signingOption: 'auto'
+#     signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+#     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: '$(build.artifactStagingDirectory)/output/iphoneos/Release' 
-    artifactName: 'drop' 
-    publishLocation: 'Container'
+# - task: CopyFiles@2
+#   inputs:
+#     contents: '**/*.ipa'
+#     targetFolder: '$(build.artifactStagingDirectory)'
+#     overWrite: true
+
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     pathtoPublish: '$(build.artifactStagingDirectory)/output/iphoneos/Release' 
+#     artifactName: 'drop' 
+#     publishLocation: 'Container'
