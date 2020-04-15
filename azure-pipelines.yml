@@ -30,9 +30,13 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: |
+    script: 
       rm -rf Podfile.lock
       pod install
+      
+- task: CmdLine@2
+  inputs:
+    script: 'fastlane development'
 
 # - task: InstallAppleCertificate@2
 #   inputs:
@@ -51,17 +55,17 @@ steps:
 #   inputs:
 #     forceRepoUpdate: false
 
-- task: Xcode@5
-  displayName: 'Building For iOS'
-  inputs:
-    actions: 'clean build test'
-    configuration: 'Debug'
-    sdk: 'iphonesimulator'
-    xcWorkspacePath: '**/GooglePlaces.xcworkspace'
-    scheme: 'GooglePlaces'
-    packageApp: false
-    destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone 8'
+# - task: Xcode@5
+#   displayName: 'Building For iOS'
+#   inputs:
+#     actions: 'clean build test'
+#     configuration: 'Debug'
+#     sdk: 'iphonesimulator'
+#     xcWorkspacePath: '**/GooglePlaces.xcworkspace'
+#     scheme: 'GooglePlaces'
+#     packageApp: false
+#     destinationPlatformOption: 'iOS'
+#     destinationSimulators: 'iPhone 8'
 
 # - task: Xcode@5
 #   inputs:
