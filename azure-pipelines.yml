@@ -50,7 +50,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 
-      bundle install
       fastlane development
 
 # - task: CocoaPods@0
