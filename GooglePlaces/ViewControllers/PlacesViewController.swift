@@ -217,6 +217,7 @@ extension PlacesViewController: UITableViewDataSource {
 }
 
 extension PlacesViewController: FilterDelegate {
+    
     func apply(_ types: Dictionary<String, String>) {
         filterDict = types
         fetchPlaces()

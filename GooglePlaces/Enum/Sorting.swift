@@ -18,4 +18,12 @@ enum Sorting: String {
     var displayName: String {
         return self.rawValue.capitalized
     }
+    
+    var allValues: [String] {
+        return [Sorting.ascending.displayName,
+                     Sorting.descending.displayName,
+                     Sorting.open.displayName,
+                     Sorting.closed.displayName,
+                     Sorting.distance.displayName]
+    }
 }
