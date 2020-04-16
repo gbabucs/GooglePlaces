@@ -778,8 +778,8 @@
 			baseConfigurationReference = 8A37BDC292FC91DBB8CF36CD /* Pods-GooglePlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development: Babu G (FV4YTM3TH9)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
 				INFOPLIST_FILE = GooglePlaces/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -789,7 +789,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.babu.sample.GooglePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = GooglePlaces;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -800,8 +800,8 @@
 			baseConfigurationReference = EE368DC7D01D78E0524F607B /* Pods-GooglePlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
 				INFOPLIST_FILE = GooglePlaces/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -811,7 +811,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.babu.sample.GooglePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = GooglePlaces;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -822,9 +822,9 @@
 			baseConfigurationReference = 5348AC702438B8010C01E42E /* Pods-GooglePlacesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development: Babu G (FV4YTM3TH9)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development: Babu G (FV4YTM3TH9)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
 				INFOPLIST_FILE = GooglePlacesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -847,9 +847,9 @@
 			baseConfigurationReference = 18D921A5AFFFCB6A549975CD /* Pods-GooglePlacesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z8GN8WKY7;
 				INFOPLIST_FILE = GooglePlacesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
