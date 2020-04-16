@@ -36,7 +36,9 @@ steps:
       
 - task: CmdLine@2
   inputs:
-    script: 'fastlane development'
+    script: 
+      bundle install
+      fastlane development
 
 # - task: InstallAppleCertificate@2
 #   inputs:
