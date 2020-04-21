@@ -62,8 +62,8 @@ steps:
   inputs:
     actions: 'clean build test'
     configuration: 'Debug'
-    sdk: 'iphonesimulator'
     xcWorkspacePath: '**/GooglePlaces.xcworkspace'
+    sdk: 'iphonesimulator'
     scheme: 'GooglePlaces'
     packageApp: false
     destinationPlatformOption: 'iOS'
