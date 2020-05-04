@@ -64,8 +64,8 @@ steps:
     configuration: 'Debug'
     xcWorkspacePath: '**/GooglePlaces.xcworkspace'
     sdk: 'iphonesimulator'
-    scheme: 'GooglePlaces'
     packageApp: false
+    scheme: 'GooglePlaces'
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 8'
 
