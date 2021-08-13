@@ -60,7 +60,7 @@ steps:
 - task: Xcode@5
   displayName: 'Building For iOS'
   inputs:
-    actions: 'clean build test'
+    actions: 'clean build test archive'
     configuration: 'Debug'
     xcWorkspacePath: '**/GooglePlaces.xcworkspace'
     sdk: 'iphonesimulator'
